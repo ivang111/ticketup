@@ -1,13 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "@ui/App";
+import { createBrowserHistory } from "history";
+import { BrowserRouter } from "react-router-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import reportWebVitals from "./reportWebVitals";
+import "./i18n";
+// import "@fontsource/poppins";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+const history = createBrowserHistory();
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter history={history}>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
 
