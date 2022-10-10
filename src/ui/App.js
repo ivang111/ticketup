@@ -1,15 +1,19 @@
 import { makeStyles } from "@mui/styles";
+import { isImportant } from "../ui/helpers";
 import { ThemeProvider } from "@mui/material/styles";
-import { defaultTheme } from "@frameworks/theme";
-import Router from "@ui/modules/router";
+import { defaultTheme } from "../frameworks/theme";
+import Router from "./modules/router";
 
-const useStyles = makeStyles({
-  root: {
-    height: "100%",
-    display: "flex",
-    flexGrow: 1,
-    flexDirection: "row",
-  },
+const useStyles = makeStyles((theme) => {
+  return {
+    root: {
+      height: "100%",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      padding: isImportant(theme.spacing(0)),
+    },
+  };
 });
 
 const App = () => {

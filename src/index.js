@@ -1,15 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "@ui/App";
-import { createBrowserHistory } from "history";
+import App from "./ui/App";
+// import { createBrowserHistory } from "history";
 import { BrowserRouter } from "react-router-dom";
 
 import reportWebVitals from "./reportWebVitals";
-import "./i18n";
+// import "./i18n";
 // import "@fontsource/poppins";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-const history = createBrowserHistory();
+// const history = createBrowserHistory();
 root.render(
   <React.StrictMode>
     <BrowserRouter history={history}>

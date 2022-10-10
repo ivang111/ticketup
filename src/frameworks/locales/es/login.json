@@ -1,0 +1,19 @@
+{
+  "title": "¡Bienvenido! Por favor, inicia sesión.",
+  "form": {
+    "welcome": "Hi",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "submit": "Ingresar",
+    "remember": "Recordarme",
+    "forget": "Olvidé la contraseña",
+    "enter-email": "Por favor ingrese su correo electronico",
+    "enter-password": "Por favor ingrese su contraseña",
+    "incorret-password": "Contraseña incorrecta"
+  },
+  "validation": {
+    "required": "^El campo es obligatorio",
+    "valid-email": "^No es un correo válido",
+    "valid-password-length": "^La contraseña debe ser de 8 caractéres mínimo"
+  }
+}

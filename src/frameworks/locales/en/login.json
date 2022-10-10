@@ -1,0 +1,22 @@
+{
+  "title": "Welcome! Please sign in.",
+  "form": {
+    "welcome":"Hi, Welcome back!",
+    "email": "Email Address",
+    "password": "Password",
+    "submit": "Log in",
+    "remember": "Recordarme",
+    "forget": "Forgot your password?",
+    "enter-email": "Please enter your email address",
+    "enter-password": "Please enter your password",
+    "incorret-password": "Incorrect password"
+  },
+  "validation": {
+    "required": "^The field is required",
+    "valid-email": "^Not a valid email",
+    "valid-password-length": "^Password must be 8 characters at least"
+  },
+  "alert": {
+    "error": "Email or password are incorrect"
+  }
+}

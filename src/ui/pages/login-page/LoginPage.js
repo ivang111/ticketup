@@ -1,13 +1,15 @@
 import { makeStyles } from "@mui/styles";
-import LoginForm from "ui/modules/login-form";
+import LoginForm from "../../modules/login-form";
 
 const useStyles = makeStyles(() => {
   return {
     root: {
+      width: "100%",
+      height: "100vh",
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      paddingTop: "30%",
+      background: "red",
     },
   };
 });
