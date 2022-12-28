@@ -5,7 +5,7 @@ import App from "./ui/App";
 import { BrowserRouter } from "react-router-dom";
 
 import reportWebVitals from "./reportWebVitals";
-// import "./i18n";
+import "./i18n";
 // import "@fontsource/poppins";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

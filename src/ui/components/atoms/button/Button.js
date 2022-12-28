@@ -2,7 +2,7 @@ import { Button as MuiButton } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import clsx from "clsx";
 import PropTypes from "prop-types";
-import { isImportant } from "ui/helpers";
+import { isImportant } from "../../../helpers";
 
 const useStyles = makeStyles(() => {
   return {
@@ -13,15 +13,17 @@ const useStyles = makeStyles(() => {
     },
     big: {
       minWidth: 150,
+      borderRadius: 25,
     },
     small: {
       height: 23,
       fontSize: 12,
       padding: 12,
-      borderRadius: 3,
+      borderRadius: 25,
     },
     large: {
       fontSize: 16,
+      borderRadius: 25,
     },
   };
 });
