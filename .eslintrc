@@ -8,7 +8,8 @@
   },
   "parserOptions": {
     "ecmaVersion": 12,
-    "sourceType": "module"
+    "sourceType": "module",
+    "requireConfigFile": false
   },
   "rules": {
     "prettier/prettier": [
@@ -47,10 +48,12 @@
     "react/react-in-jsx-scope": [0]
   },
   "extends": [
-    "plugin:import/typescript",
     "plugin:react/recommended",
-    "prettier"
-  ],
+    "standard",
+    "plugin:react/jsx-runtime",
+    "plugin:testing-library/react",
+    "plugin:jest/all"
+],
   "settings": {
     "import/resolver": {
       "alias": {
@@ -64,10 +67,10 @@
           ["@pages", "./src/pages"],
           ["@assets", "./src/ui/assets"]
         ],
-        "extensions": [".ts", ".js", ".jsx", ".json", ".svg"]
+        // "extensions": [".ts", ".js", ".jsx", ".json", ".svg"]
       }
     }
   },
   "plugins": ["react", "import", "prettier"],
-  "parser": "@babel/eslint-parser"
+  "parser": "@babel/eslint-parser",
 }
