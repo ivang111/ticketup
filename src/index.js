@@ -3,17 +3,19 @@ import ReactDOM from "react-dom/client";
 import App from "./ui/App";
 // import { createBrowserHistory } from "history";
 import { BrowserRouter } from "react-router-dom";
-
+import { Provider } from "react-redux";
 import reportWebVitals from "./reportWebVitals";
+import store from "./redux/store";
 import "./i18n";
-// import "@fontsource/poppins";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // const history = createBrowserHistory();
 root.render(
   <React.StrictMode>
     <BrowserRouter history={history}>
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </BrowserRouter>
   </React.StrictMode>
 );

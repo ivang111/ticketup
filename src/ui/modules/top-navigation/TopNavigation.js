@@ -58,6 +58,18 @@ const TopNavigation = () => {
         </>
       );
     }
+    if (location.pathname === routes.home.path) {
+      return (
+        <>
+          <Typography
+            className={styles.action}
+            text={t("¿Aun no estas regitrado?")}
+            variant="body"
+          />
+          <Button onClick={handleOnClickSignUp} text={t("Close sesion")} variant="contained" />
+        </>
+      );
+    }
   }, [location]);
 
   return (

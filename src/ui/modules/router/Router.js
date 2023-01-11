@@ -9,7 +9,15 @@ import HomePage from "../../pages/home";
 const Router = () => {
   return (
     <Routes>
-      <Route element={<HomePage />} path={routes.home.path} />
+      <Route
+        Topbar={TopNavigation}
+        element={
+          <MinimalLayout Topbar={TopNavigation}>
+            <HomePage />
+          </MinimalLayout>
+        }
+        path={routes.home.path}
+      />
       <Route
         element={
           <MinimalLayout Topbar={TopNavigation}>

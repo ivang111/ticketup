@@ -1,5 +1,7 @@
 const REACT_APP_BASE_URL = "https://apiticketupcode.up.railway.app/api/";
-
+const ACTIONS_TYPES = {
+  GET_USER_DATA: "GET_USER_DATA",
+};
 const API = {
   USER_LOGUIN: "",
   USER_REFRESH_TOKEN: "",
@@ -43,4 +45,4 @@ const GENDERS = [
   },
 ];
 
-export { REACT_APP_BASE_URL, API, GENDERS };
+export { REACT_APP_BASE_URL, API, GENDERS, ACTIONS_TYPES };
