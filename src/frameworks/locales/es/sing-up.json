@@ -8,6 +8,26 @@
         "return": "Regresar"
     },
     "singup": {
-        "": ""
+        "title": "Crea tu cuenta",
+        "name": "Nombres",
+        "placeholderName": "Por favor ingrese sus nombres",
+        "lastName": "Apellidos",
+        "placeholderLastName": "Por favor ingrese sus apellidos",
+        "email": "E-mail",
+        "password": "Contraseña",
+        "placeholderPassword": "Por favor ingrese su contraseña",
+        "length-password": "8 caracteres o más.",
+        "number-password": "Un número.",
+        "letter-password": "Una letra.",
+        "character-password": "Un caracter especial.",
+        "repetPassword": "Confirme su contraseña",
+        "placeholderrepetPassword": "Por favor confirme contraseña",
+        "submit": "Crear cuenta",
+        "haveAcount": "¿Tienes un cuenta ya?",
+        "login": "Inicie sesión",
+        "termsInfo": "Al hacer clic en el botón de arriba, usted acepta nuestros",
+        "terms": "Terminos",
+        "and": "y",
+        "privacy": "Condiciones"
     }
 }

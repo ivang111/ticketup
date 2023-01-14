@@ -6,7 +6,6 @@ import FormManager from "../form-manager";
 import Typography from "../../components/atoms/typography";
 import TextField from "../../components/atoms/textfield";
 import Button from "../../components/atoms/button";
-import Card from "../../components/molecules/card";
 import { useNavigate } from "react-router-dom";
 import { routes } from "../../helpers";
 import Alert from "../../components/molecules/alert";
@@ -14,18 +13,9 @@ import Alert from "../../components/molecules/alert";
 const useStyles = makeStyles((theme) => {
   return {
     form: {},
-    signUpBox: {
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center",
+    title: {
       textAlign: "center",
-      padding: theme.spacing(1, 4),
-      paddingTop: theme.spacing(1),
-      borderRadius: 5,
-      background: theme.palette.background.paper,
-      boxShadow: "0px 32px 64px -12px rgba(0, 0, 0, 0.14) !important",
-      minWidth: 540,
+      marginBottom: `${theme.spacing(2)} !important`,
     },
     body: {},
     fieldContainer: {
@@ -35,7 +25,7 @@ const useStyles = makeStyles((theme) => {
       margin: `${theme.spacing(1, 0)} !important`,
     },
     label: {
-      color: theme.palette.grey[700],
+      color: theme.palette.grey[600],
     },
     submitContainer: {
       display: "flex",
@@ -49,6 +39,9 @@ const useStyles = makeStyles((theme) => {
     typographyLink: {
       color: theme.palette.primary.main,
       margin: `${theme.spacing(0, 0.5)} !important`,
+    },
+    login: {
+      textAlign: "center",
     },
     conteinerBotton: {
       display: "inline-flex",
@@ -74,18 +67,20 @@ const useStyles = makeStyles((theme) => {
 
 const SignUpForm = () => {
   const styles = useStyles();
-  const { t } = useTranslation("signUp");
+  const { t } = useTranslation("singUP");
   const navigate = useNavigate();
   const valores = window.location.search;
   const urlParams = new URLSearchParams(valores);
   const invitationType = urlParams.get("invitationType");
   const [alert, setAlert] = useState({ show: false, text: "", severity: "error" });
 
+  let email = "emailtest@test.com";
+
   const [formState, setFormState] = useState({
     values: {
       firstName: "",
       lastName: "",
-      email: "",
+      email: email,
       password: "",
       confirmPassword: "",
     },
@@ -205,111 +200,111 @@ const SignUpForm = () => {
   });
 
   return (
-    <Card className={styles.signUpBox}>
-      <Card.Header
-        title={<Typography fontWeight="fontWeightBold" text={t("form.welcome")} variant="h3" />}
-      />
-      <Card.Body className={styles.body}>
-        <FormManager
-          className={styles.form}
-          initialState={formState}
-          onChange={setFormState}
-          onSubmit={onSubmit}
-        >
-          <FormManager.FormControl className={styles.fieldContainer}>
-            <Typography className={styles.label} text={t("form.firstname")} variant="body1" />
-            <FormManager.FormField
-              Field={TextField}
-              className={styles.field}
-              name="firstName"
-              placeholder={t("form.enter-firstname")}
-              size="small"
-              type="text"
-            />
-          </FormManager.FormControl>
-          <FormManager.FormControl className={styles.fieldContainer}>
-            <Typography className={styles.label} text={t("form.lastname")} variant="body1" />
-            <FormManager.FormField
-              Field={TextField}
-              className={styles.field}
-              name="lastName"
-              placeholder={t("form.enter-lastname")}
-              size="small"
-              type="text"
-            />
-          </FormManager.FormControl>
-          <FormManager.FormControl className={styles.fieldContainer}>
-            <Typography className={styles.label} text={t("form.email")} variant="body1" />
-            <FormManager.FormField
-              Field={TextField}
-              className={styles.field}
-              name="email"
-              placeholder={t("form.enter-email")}
-              size="small"
-              type="email"
-              value={undefined}
-            />
-          </FormManager.FormControl>
-          <FormManager.FormControl className={styles.fieldContainer}>
-            <Typography className={styles.label} text={t("form.password")} variant="body1" />
-            <FormManager.FormField
-              Field={TextField}
-              className={styles.field}
-              name="password"
-              placeholder={t("form.enter-password")}
-              size="small"
-              type="password"
-            />
-          </FormManager.FormControl>
-          <FormManager.FormControl className={styles.fieldContainer}>
-            <Typography text={t("form.confirm-password")} variant="body1" />
-            <FormManager.FormField
-              Field={TextField}
-              className={styles.field}
-              name="confirmPassword"
-              placeholder={t("form.enter-confirm-password")}
-              size="small"
-              type="password"
-            />
-          </FormManager.FormControl>
-          <FormManager.FormControl className={styles.submitContainer}>
-            <FormManager.FormSubmit
-              Button={Button}
-              className={styles.submit}
-              text={t("form.submit")}
-              variant="contained"
-            />
-          </FormManager.FormControl>
-          <FormManager.FormControl>
-            <Typography
-              text={
-                <>
-                  {t("form.have-account")}{" "}
-                  <Button onClick={handleOnClickLogin} text={t("form.loguin")} />
-                </>
-              }
-              variant="body1"
-            />
-          </FormManager.FormControl>
-        </FormManager>
-      </Card.Body>
+    <>
+      <FormManager
+        className={styles.form}
+        initialState={formState}
+        onChange={setFormState}
+        onSubmit={onSubmit}
+      >
+        <Typography
+          className={styles.title}
+          fontWeight="fontWeightBold"
+          text={t("singup.title")}
+          variant="h3"
+        />
+        <FormManager.FormControl className={styles.fieldContainer}>
+          <Typography className={styles.label} text={t("singup.name")} variant="body1" />
+          <FormManager.FormField
+            Field={TextField}
+            className={styles.field}
+            name="firstName"
+            placeholder={t("singup.placeholderName")}
+            size="small"
+            type="text"
+          />
+        </FormManager.FormControl>
+        <FormManager.FormControl className={styles.fieldContainer}>
+          <Typography className={styles.label} text={t("singup.lastName")} variant="body1" />
+          <FormManager.FormField
+            Field={TextField}
+            className={styles.field}
+            name="lastName"
+            placeholder={t("singup.placeholderLastName")}
+            size="small"
+            type="text"
+          />
+        </FormManager.FormControl>
+        <FormManager.FormControl className={styles.fieldContainer}>
+          <Typography className={styles.label} text={t("singup.email")} variant="body1" />
+          <FormManager.FormField
+            Field={TextField}
+            className={styles.field}
+            name="email"
+            placeholder={email}
+            size="small"
+            type="email"
+            value={email}
+          />
+        </FormManager.FormControl>
+        <FormManager.FormControl className={styles.fieldContainer}>
+          <Typography className={styles.label} text={t("singup.password")} variant="body1" />
+          <FormManager.FormField
+            Field={TextField}
+            className={styles.field}
+            name="password"
+            placeholder={t("singup.placeholderPassword")}
+            size="small"
+            type="password"
+          />
+        </FormManager.FormControl>
+        <FormManager.FormControl className={styles.fieldContainer}>
+          <Typography className={styles.label} text={t("singup.repetPassword")} variant="body1" />
+          <FormManager.FormField
+            Field={TextField}
+            className={styles.field}
+            name="confirmPassword"
+            placeholder={t("singup.placeholderrepetPassword")}
+            size="small"
+            type="password"
+          />
+        </FormManager.FormControl>
+        <FormManager.FormControl className={styles.submitContainer}>
+          <FormManager.FormSubmit
+            Button={Button}
+            className={styles.submit}
+            text={t("singup.submit")}
+            variant="contained"
+          />
+        </FormManager.FormControl>
+        <FormManager.FormControl>
+          <Typography
+            className={styles.login}
+            text={
+              <>
+                {t("singup.haveAcount")}{" "}
+                <Button onClick={handleOnClickLogin} text={t("singup.login")} />
+              </>
+            }
+            variant="body1"
+          />
+        </FormManager.FormControl>
+        <Typography component="span" text={t("singup.termsInfo")} variant="body2" />
+        <Typography
+          className={styles.typographyLink}
+          component="span"
+          text={t("singup.terms")}
+          variant="body2"
+        />
+        <Typography component="span" text={t("singup.and")} variant="body2" />
+        <Typography
+          className={styles.typographyLink}
+          component="span"
+          text={t("singup.privacy")}
+          variant="body2"
+        />
+      </FormManager>
 
-      <Card.Actions className={styles.foot}>
-        <Typography component="span" text={t("form.info-terms-privacy")} variant="body2" />
-        <Typography
-          className={styles.typographyLink}
-          component="span"
-          text={t("form.terms")}
-          variant="body2"
-        />
-        <Typography component="span" text={t("form.and")} variant="body2" />
-        <Typography
-          className={styles.typographyLink}
-          component="span"
-          text={t("form.privacy")}
-          variant="body2"
-        />
-      </Card.Actions>
       <Alert
         floating
         onClose={handleOnClose}
@@ -318,7 +313,7 @@ const SignUpForm = () => {
         text={alert.text}
         timeout={5}
       />
-    </Card>
+    </>
   );
 };
 export default SignUpForm;

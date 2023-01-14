@@ -8,6 +8,39 @@
         "return": "Return"
     },
     "singup": {
-        "": ""
+        "title": "Create Your Account",
+        "name": "First name",
+        "placeholderName": "Please enter your first name",
+        "lastName": "Last name",
+        "placeholderLastName": "Please enter your last name",
+        "email": "Email Address",
+        "password": "Password",
+        "placeholderPassword": "Please enter your password",
+        "repetPassword": "Confirm Password",
+        "placeholderrepetPassword": "Please confirm your password",
+        "submit": "Create Account",
+        "haveAcount": "Have account?",
+        "login": "Login here!",
+        "termsInfo": "By clicking the button above, you agree to our ",
+        "terms": "Terms of Service",
+        "and": "and",
+        "privacy": "Privacy Policy."
+    },
+    "validation": {
+        "required": "^The field is required",
+        "required-email": "^An email address is required!",
+        "valid-email": "^Not a valid email",
+        "valid-password-length": "^8 characters or longer.",
+        "valid-password-number": "^One number.",
+        "valid-password-letter": "^One letter.",
+        "valid-password-special-char": "^One special character.",
+        "valid-password-same": "^Passwords do not match.",
+        "valid-password-uppercase": "^One uppercase"
+    },
+    "alert": {
+        "success":"Account created!",
+        "error": "An error has occurred",
+        "warning-exists": "This email address already exists!",
+        "warning-expired":"Authorization email expired"
     }
 }
