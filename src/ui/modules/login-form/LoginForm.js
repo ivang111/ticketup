@@ -5,8 +5,8 @@ import { makeStyles } from "@mui/styles";
 import FormManager from "../form-manager";
 import TextField from "../../components/atoms/textfield";
 import Typography from "../../components/atoms/typography";
-// import { useNavigate } from "react-router-dom";
-// import { routes } from "../../helpers";
+import { useNavigate } from "react-router-dom";
+import { routes } from "../../helpers";
 import Alert from "../../components/molecules/alert";
 //import Progress from "../../components/atoms/progress";
 
@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => {
 const LoginForm = () => {
   const styles = useStyles();
   const { t } = useTranslation("login");
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
   const [alert, setAlert] = useState({ show: false, text: "" });
   // const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
@@ -85,7 +85,7 @@ const LoginForm = () => {
     setAlert({ show: false, text: "" });
   });
   const handleOnClickForgetPassword = useCallback(() => {
-    //navigate(routes.forgotPassword.path);
+    navigate(routes.forgotPassword.path);
   });
 
   const form = useMemo(() => {

@@ -2,7 +2,7 @@ import { makeStyles } from "@mui/styles";
 import { useTranslation } from "../../../frameworks/translation";
 import { useMemo, useCallback } from "react";
 import { routes } from "../../helpers";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Button from "../../components/atoms/button";
 import Typography from "../../components/atoms/typography";
 import TopBar from "../../components/molecules/top-bar";
@@ -42,8 +42,11 @@ const TopNavigation = () => {
   const styles = useStyles();
   const { t } = useTranslation(["common"]);
   const location = useLocation();
+  const navigate = useNavigate();
 
-  const handleOnClickSignUp = useCallback(() => {});
+  const handleOnClickSignUp = useCallback(() => {
+    navigate(routes.singUpEmailValidation.path);
+  });
 
   const user = useMemo(() => {
     if (location.pathname === routes.login.path) {

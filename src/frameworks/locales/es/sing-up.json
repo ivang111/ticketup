@@ -1,0 +1,13 @@
+{
+    "singUpEmail": {
+        "title": "Introduce tu correo electrónico",
+        "subtitle": "Para continuar con el registro, el correo electrónico debe estar previamente registrado en la base de datos de la empresa.",
+        "email": "Correo electronico",
+        "placeholder": "ingrese tu correo",
+        "submit": "Enviar",
+        "return": "Regresar"
+    },
+    "singup": {
+        "": ""
+    }
+}

@@ -3,9 +3,11 @@ import { initReactI18next } from "react-i18next";
 
 //spanish
 import login_es from "./frameworks/locales/es/login.json";
+import sing_up_es from "./frameworks/locales/es/sing-up.json";
 
 //english
 import login_en from "./frameworks/locales/en/login.json";
+import sing_up_en from "./frameworks/locales/en/sing-up.json";
 
 i18n
 
@@ -24,9 +26,11 @@ i18n
     resources: {
       es: {
         login: login_es,
+        singUP: sing_up_es,
       },
       en: {
         login: login_en,
+        singUP: sing_up_en,
       },
     },
   });

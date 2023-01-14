@@ -1,0 +1,13 @@
+{
+    "singUpEmail": {
+        "title": "Enter your email",
+        "subtitle": "To continue with the registration, the email must be previously registered in the company's database.",
+        "email": "Email",
+        "placeholder": "enter your email",
+        "submit": "Submit",
+        "return": "Return"
+    },
+    "singup": {
+        "": ""
+    }
+}
