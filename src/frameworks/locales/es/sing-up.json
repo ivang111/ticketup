@@ -29,5 +29,22 @@
         "terms": "Terminos",
         "and": "y",
         "privacy": "Condiciones"
+    },
+    "validation": {
+        "required": "^El campo es obligatorio.",
+        "required-email": "^¡Se requiere una dirección de correo electrónico!",
+        "valid-email": "^No es un correo electrónico válido.",
+        "valid-password-length": "^8 caracteres o más.",
+        "valid-password-number": "^Un número.",
+        "valid-password-letter": "^Una letra.",
+        "valid-password-special-char": "^Un caracter especial.",
+        "valid-password-same": "^Las contraseñas no coinciden.",
+        "valid-password-uppercase": "^una letra mayúscula"
+      },
+    "alert": {
+        "success":"¡Cuenta creada!",
+        "error": "Se ha producido un error",
+        "warning-exists": "¡Esta direccion de correo electronico ya existe!",
+        "warning-expired":"Correo electrónico de autorización caducado"
     }
 }

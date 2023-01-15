@@ -1,5 +1,5 @@
 import { makeStyles } from "@mui/styles";
-import ForgotPasswordForm from "../../modules/forgot-password-form";
+import ForgotPasswordInstructios from "../../modules/forgot-password-instructios";
 
 const useStyles = makeStyles((theme) => {
   return {
@@ -14,14 +14,14 @@ const useStyles = makeStyles((theme) => {
   };
 });
 
-const ForgotPasswpordPage = () => {
+const ForgotPasswordIntrusctionsPage = () => {
   const styles = useStyles();
 
   return (
     <div className={styles.root}>
-      <ForgotPasswordForm />
+      <ForgotPasswordInstructios />
     </div>
   );
 };
 
-export default ForgotPasswpordPage;
+export default ForgotPasswordIntrusctionsPage;

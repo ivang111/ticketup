@@ -1,14 +1,15 @@
 import { makeStyles } from "@mui/styles";
 import LoginForm from "../../modules/login-form";
 
-const useStyles = makeStyles(() => {
+const useStyles = makeStyles((theme) => {
   return {
     root: {
       width: "100%",
-      height: "100vh",
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
+      padding: theme.spacing(10, 0, 2, 0),
+      backgroundColor: theme.palette.background.paper,
     },
   };
 });

@@ -15,9 +15,13 @@ const routes = {
     path: "/forgot-pasword",
     name: "forgot-pasword",
   },
-  changePassword: {
-    path: "/change-pasword",
-    name: "change-pasword",
+  forgotPasswordIntructions: {
+    path: "/forgot-pasword-instructions",
+    name: "forgot-pasword-instructions",
+  },
+  newPassword: {
+    path: "/new-pasword",
+    name: "new-pasword",
   },
   home: {
     path: "/",

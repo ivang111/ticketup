@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => {
     },
     title: {
       marginBottom: `${theme.spacing(5)} !important`,
+      textAlign: "center",
     },
     field: {
       margin: `${theme.spacing(1, 0)} !important`,

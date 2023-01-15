@@ -282,7 +282,7 @@ const SignUpForm = () => {
             className={styles.login}
             text={
               <>
-                {t("singup.haveAcount")}{" "}
+                {t("singup.haveAcount")}
                 <Button onClick={handleOnClickLogin} text={t("singup.login")} />
               </>
             }
