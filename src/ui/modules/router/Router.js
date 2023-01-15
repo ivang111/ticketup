@@ -7,7 +7,7 @@ import NotFoundPage from "../../pages/not-found-page";
 import HomePage from "../../pages/home";
 import SingUpPage from "../../pages/sing-up-page";
 import ForgotPasswordPage from "../../pages/forgot-password-page";
-import ChangePasswordPage from "../../pages/change-password-page";
+import NewPasswordPage from "../../pages/new-password-page";
 import SingUpEmailValidationPage from "../../pages/sing-up-email-validation-page";
 import ForgotPasswordIntrusctionsPage from "../../pages/forgot-password-instructions-page";
 
@@ -65,7 +65,7 @@ const Router = () => {
       <Route
         element={
           <MinimalLayout Topbar={TopNavigation}>
-            <ChangePasswordPage />
+            <NewPasswordPage />
           </MinimalLayout>
         }
         path={routes.newPassword.path}
