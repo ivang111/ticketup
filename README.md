@@ -1,7 +1,7 @@
 # TICKET UP
 
 > El ticket es una herramienta de gestión que permite mantene con vida el sistema de información de una compañía. Es el medio formal que una organización utilizará para plasmar los hallazgos en materia de desvíos a las normas y a las buenas prácticas. El **ticket up** como tal, es una herramienta de excelencia y lleva a la aplicación de las mejores prácticas en la resolución de problemas.
-
+  
 ## Funcionamiento y conceptos
 
 El ticket permite evidenciar un hallazgo en un área determinada, bajos ciertos criterios de buenas prácticas y con ciertas condiciones de aceptabilidad y comunicar al área involucrada el desvío, inclusive con el soporte de una imágen. Además de salvarse en la base de datos de la herramienta para su consulta posterior, este hallazgo se convierte en un aviso por email al o a los destinatarios del sistema y del área concerniente.
